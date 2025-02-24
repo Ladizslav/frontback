@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jednoduchý blog</title>
+    <script>
+        async function loadPosts() {
+            const response = await fetch('http://localhost:3000/posts');
+            const posts = await response.json();
+            document.getElementById('posts').innerHTML = posts.map(post => `<h3>${post.title}</h3><p>${post.content}</p>`).join('');
+        }
+        window.onload = loadPosts;
+    </script>
+</head>
+<body>
+    <h1>Blog</h1>
+    <div id="posts"></div>
+</body>
+</html>
