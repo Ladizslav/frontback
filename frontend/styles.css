@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+}
+h1, h2 {
+    text-align: center;
+}
+.post {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
