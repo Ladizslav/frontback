@@ -14,7 +14,7 @@ services:
     build: ./frontend
     container_name: frontend
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - backend
 
@@ -24,8 +24,5 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - ./data:/data
     command: mongod --bind_ip_all
-
-volumes:
-  mongo_data:
